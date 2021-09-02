@@ -3,6 +3,9 @@ from . import views
 
 """
 Open a browser to test the URLs defined so far
+
+C:\sers\rvish\sudha\DjangoPython\tinitiate>python manage.py runserver
+
   *  http://127.0.0.1:8000/app_response_types/plain_text
   *  http://127.0.0.1:8000/app_response_types/xml_text
   *  http://127.0.0.1:8000/app_response_types/json_response

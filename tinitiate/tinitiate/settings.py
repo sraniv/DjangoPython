@@ -9,18 +9,42 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
+import os
 from pathlib import Path
+
+"""
+    To fix secret key error, ie. not to expose in this file
+    from dotenv import load_dotenv
+    load_dotenv()
+    SECRET_KEY=str(os.getenv('SECRET_KEY'))
+
+    # SECURITY WARNING: keep the secret key used in production secret!
+    #secret key is now stored in .env
+"""
+###https://stackoverflow.com/questions/4664724/distributing-django-projects-with-unique-secret-keys
+import dotenv
+from . import utils
+from dotenv import load_dotenv
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+#load_dotenv()
+
+try:
+    SECRET_KEY = os.environ['SECRET_KEY']
+except KeyError:
+    path_env = os.path.join(BASE_DIR, '.env')
+    utils.generate_secret_key(path_env)
+    #dotenv.read_dotenv(path_env)
+    load_dotenv()
+    SECRET_KEY = os.environ['SECRET_KEY']
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-mb)$#k^9nda5byx4lpz1h4vktk*7b*i-_rz*+x7i4j!^z9g+k$'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True

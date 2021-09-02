@@ -1,6 +1,9 @@
 from django.shortcuts import render
 """
 * Open a browser to test the URLs defined so far
+
+C:\sers\rvish\sudha\DjangoPython\tinitiate>python manage.py runserver
+
  *  http://127.0.0.1:8000/app_views/view_no_param
  *  http://127.0.0.1:8000/app_views/view_integer_param/1
  *  http://127.0.0.1:8000/app_views/view_string_param/hello
