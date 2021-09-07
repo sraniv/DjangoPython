@@ -17,6 +17,9 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
+    # HOME PAGE
+    path(r'^$', include('app_home.urls')),
+    path('app_urls/', include('app_urls.urls')),
     path('app_response_types/', include('app_response_types.urls')),
     path('multiple_views/', include('app_multiple_view_files.urls')),
     path('app_views/', include('app_views.urls')),

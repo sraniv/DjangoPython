@@ -65,6 +65,8 @@ INSTALLED_APPS = [
     'app_views',
     'app_multiple_view_files',
     'app_response_types',
+    'app_home',
+    'app_urls',
 ]
 
 MIDDLEWARE = [
