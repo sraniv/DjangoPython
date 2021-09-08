@@ -28,7 +28,7 @@ ContentName: django-view-templates
 ```
 python manage.py startapp app_django_html_templates
 ```
-
+###Create templates folder in app_django_html_templates
 ### STEP 2. Add APP details to Project settings.py file
 * Add Template Directory to `TEMPLATES` Dictionary in the projects `settings.py`
   `'DIRS': ['F:\\code\\tinitiate\\source\\python-django\\code\\tinitiate\\app_django_html_templates\\templates'],`
@@ -154,8 +154,8 @@ from . import views
 
 urlpatterns = [
     # For URL: localhost:8000
-    path('st_python', views.simple_template_python, name='st_python'),
-    path('st_java', views.simple_template_java, name='st_java'),
+    path('st_python', views.simple_template_python, name='simple_template_python'),
+    path('st_java', views.simple_template_java, name='simple_template_java'),
 ]
 ```
 
