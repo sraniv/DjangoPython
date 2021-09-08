@@ -22,10 +22,11 @@ ContentName: django-template-inheritance
 ```
 python manage.py startapp app_django_templates_inheritance
 ```
+###---Missing step Create templates folder under app_django_template_inheritance
 
 ### STEP 2. Edit Project level settings.py file for Template Data
 * Add Template Directory details to the Projects `settings.py`
-  `'DIRS': ['F:\\code\\tinitiate\\source\\python-django\\code\\tinitiate\\app_django_html_templates\\templates'],`
+  `'DIRS': ['F:\\code\\tinitiate\\source\\python-django\\code\\tinitiate\\app_django_template_inheritance\\templates'],`
 * Add Static Files Directory, that will be used to host static libraries like 
   jQuery or Angular or custom CSS and JS files
 

@@ -19,6 +19,7 @@ from django.urls import path, include
 urlpatterns = [
     # HOME PAGE
     path(r'^$', include('app_home.urls')),
+    path('app_django_templates_inheritance/', include('app_django_templates_inheritance.urls')),
     path('app_django_html_templates/', include('app_django_html_templates.urls')),
     path('app_urls/', include('app_urls.urls')),
     path('app_response_types/', include('app_response_types.urls')),

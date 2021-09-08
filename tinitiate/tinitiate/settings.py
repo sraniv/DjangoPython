@@ -68,6 +68,7 @@ INSTALLED_APPS = [
     'app_home',
     'app_urls',
     'app_django_html_templates',
+    'app_django_templates_inheritance',
 ]
 
 MIDDLEWARE = [
@@ -85,7 +86,9 @@ ROOT_URLCONF = 'tinitiate.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['C:\\Users\\rvish\\sudha\\DjangoPython\\tinitiate\\app_django_html_templates\\templates',],
+        'DIRS': ['C:\\Users\\rvish\\sudha\\DjangoPython\\tinitiate\\app_django_html_templates\\templates',
+                 'C:\\Users\\rvish\\sudha\\DjangoPython\\tinitiate\\app_django_templates_inheritance\\templates',
+                 ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
